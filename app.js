@@ -12,7 +12,7 @@ const port = process.env.port || 3000;
 app.listen(port,()=>{
     console.log(`Server Listening on Port http://localhost:${port}`);
 })
-console.log("My name is ",process.env.MYNAME);
+// console.log("My name is ",process.env.MYNAME);
 app.use(bodyParser.json())
 app.use(express.urlencoded({extended:false}));
 app.use("/",UserRoute);
