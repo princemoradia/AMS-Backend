@@ -1,7 +1,11 @@
-const mongoose = require('mongoose');
-
-const connection = mongoose.createConnection(process.env.MONGO_URL).on('open',()=>{console.log("MongoDB Connected");}).on('error',()=>{
+const mongoose = require("mongoose");
+const connection = mongoose
+  .createConnection("mongodb://localhost:27017/ams")
+  .on("open", () => {
+    console.log("MongoDB Connected");
+  })
+  .on("error", () => {
     console.log("MongoDB Connection error");
-});
+  });
 
 module.exports = connection;
